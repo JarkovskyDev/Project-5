@@ -26,16 +26,17 @@ export function VideoGridItem({
     videoUrl
 }: VideoGridItemProps) {
 
-}
-
-const VideoGridItem = () => {
-  return (
-    <div className='flex flex-col gap-2'>
+  const VideoGridItem = () => {
+    return (
+      <div className='flex flex-col gap-2'>
         <a href={`/watch?v=${id}`} className='relative aspect-video'/>
-        
+          <img src={thumbnailUrl} className='block w-full f-full object-cover rounded-xl'/>
         </a>
-    </div>
-  )
+        <div className='absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded'>
+          {duration}
+        </div>
+      </div>
+    )
+  }
 }
-
 export default VideoGridItem
